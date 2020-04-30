@@ -7,7 +7,6 @@ def apply_coupons(cart, coupons)
   
   
   #		{:item => "AVOCADO", :num => 2, :cost => 5.00},
-  puts coupons
   coupons.each do |coupon_item|
     # puts coupon_item
     # check the cart for that item
@@ -37,9 +36,9 @@ def apply_coupons(cart, coupons)
         # cart.delete(current_item)
       # end
       
+    end
   end
-end
-cart
+  cart
 end
   
 
