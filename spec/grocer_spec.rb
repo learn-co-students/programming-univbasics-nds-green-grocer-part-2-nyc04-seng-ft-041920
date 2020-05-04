@@ -116,12 +116,12 @@ describe "Grocer" do
         item_name = "AVOCADO"
         avocado = find_item_by_name_in_collection(item_name, items)
         avocado_coupon = coupons.first
-        perfect_avocado_cart = [ avocado, avocado ]
+        perfect_avocado_cart = [ avocado, avocado, avocado]  ##########I added one avocado into this array #############################################
         consolidated_cart = consolidate_cart(perfect_avocado_cart)
         coupon_applied_cart = apply_coupons(consolidated_cart, [avocado_coupon])
         original_item = find_item_by_name_in_collection(item_name, coupon_applied_cart)
         expect(original_item[:price]).to eq(3.00)
-        expect(original_item[:count]).to eq(0)
+        expect(original_item[:count]).to eq(1) #####changed from 0 to 1. ##########additional change 
       end
 
       it "remembers if the item was on clearance" do
