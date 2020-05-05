@@ -6,7 +6,7 @@ def find_item_by_name_in_collection(name, collection)
     index += 1
   end
 
-  nil
+   nil 
 end
 
 
